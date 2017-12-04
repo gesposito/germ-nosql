@@ -1,0 +1,11 @@
+# Start MongoDB and Redis as Docker services
+# docker-compose -f docker-compose-dev.yml up
+
+mongo:
+  image: mongo:3.4
+  ports:
+    - "27017:27017"
+redis:
+  image: redis:3.0
+  ports:
+    - "6379:6379"

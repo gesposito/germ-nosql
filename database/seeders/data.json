@@ -1,0 +1,27 @@
+{
+
+    "users": {
+        "_model": "User",
+        "1": {
+            "name": "Gianluca",
+            "username": "gesposito"
+        }
+    },
+
+    "events": {
+        "_model": "Event",
+        "1": {
+            "name": "React Europe",
+            "attendees": [
+                "->users.1"
+            ]
+        },
+        "2": {
+            "name": "React.js conf",
+            "attendees": [
+                "->users.1"
+            ]
+        }
+    }
+
+}

@@ -1,0 +1,31 @@
+query event($id: String) {
+	event(id: $id) {
+    id
+    name
+  }
+}
+
+query events {
+  evt1: event(id: "1") {
+    ...event
+
+  }
+  evt2: event(id: "2") {
+    ...event
+  }
+}
+
+fragment event on Event {
+  id
+  name
+  attendees {
+    username
+    location
+  }
+}
+
+mutation eventCreate {
+  eventMutation(name: "GraphQL Conf") {
+    name
+  }
+}
